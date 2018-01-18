@@ -1,22 +1,27 @@
+
+
+
+
+
+
+
 $(document).ready(function() {
-  var elements = ["header","paragraph","image"]
-  elements.forEach(function(element) {
-    $("." + element).click(function(event) {
-      alert("This is a " + element);
-      event.preventDefault();
-    });
-  //
-  //
-  // $("h1").click(function() {
-  //   alert("This is a header.");
-  // });
-  //
-  // $("p").click(function() {
-  //   alert("This is a paragraph.");
-  // });
-  //
-  // $("img").click(function() {
-  //   alert("This is an image.");
-  // });
+
+  var flavors = []
+
+  $("button.button").click(function() {
+    var flavor = $("input#flavors").val();
+    flavors.push(flavor);
+    alert(flavors);
+    $("ul").prepend("<li>" + flavor + "</li>");
+    event.preventDefault();
   });
+//
+//   $("button#goodbye").click(function() {
+//     $("ul").prepend("<li>Goodbye!</li>");
+//   });
+//
+//   $("button#stop").click(function() {
+//     $("ul").prepend("<li>Stop copying me!</li>");
+//   });
 });
